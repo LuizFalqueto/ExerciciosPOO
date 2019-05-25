@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Diagrama">
+  <ClassDiagramComponents>
+    <Class name="Ponto2" package="" visibility="public" xPosition="26.0" yPosition="126.0">
+      <Fields>
+        <Field name="x" type="double" visibility="private"/>
+        <Field name="y" type="double" visibility="private"/>
+        <Field name="LIMITE_INF_DEFAULT" type="double" visibility="private"/>
+        <Field name="LIMITE_SUP_DEFAULT" type="double" visibility="private"/>
+        <Field name="LIMITE_INF" type="double" visibility="private"/>
+        <Field name="LIMITE_SUP" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="isLimite" returnType="double" visibility="public">
+          <Argument type="double" name="coordenada"/>
+        </Method>
+        <Method name="setX" returnType="double" visibility="public">
+          <Argument type="double" name="_x"/>
+        </Method>
+        <Method name="setY" returnType="double" visibility="public">
+          <Argument type="double" name="_y"/>
+        </Method>
+        <Method name="getX" returnType="double" visibility="public"/>
+        <Method name="getY" returnType="double" visibility="public"/>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+        <Method name="getLIMITE_INF" returnType="double" visibility="public"/>
+        <Method name="getLIMITE_SUP" returnType="double" visibility="public"/>
+        <Method name="setLIMITE_INF" returnType="double" visibility="public">
+          <Argument type="double" name="inferior"/>
+        </Method>
+        <Method name="setLIMITE_SUP" returnType="double" visibility="public">
+          <Argument type="double" name="superior"/>
+        </Method>
+        <Method name="getLIMITE_SUP_DEFAULT" returnType="double" visibility="public"/>
+        <Method name="clonar" returnType="Ponto2" visibility="public"/>
+        <Method name="criaSwap" returnType="Ponto2" visibility="public"/>
+        <Method name="temEixoComum" returnType="Ponto" visibility="public">
+          <Argument type="Ponto" name="_ponto"/>
+        </Method>
+        <Method name="distancia" returnType="double" visibility="public">
+          <Argument type="double" name="x1"/>
+          <Argument type="double" name="y1"/>
+          <Argument type="double" name="x2"/>
+          <Argument type="double" name="y2"/>
+        </Method>
+        <Method name="distancia" returnType="Ponto" visibility="public">
+          <Argument type="Ponto" name="_ponto"/>
+        </Method>
+        <Method name="distancia" returnType="double" visibility="public">
+          <Argument type="double" name="_x"/>
+          <Argument type="double" name="_y"/>
+        </Method>
+        <Method name="distanciaDaOrigem" returnType="double" visibility="public"/>
+        <Method name="compareTo" returnType="Ponto" visibility="public">
+          <Argument type="Ponto" name="_ponto"/>
+        </Method>
+        <Method name="equals" returnType="Object" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Escalavel" package="" visibility="public" xPosition="1165.0" yPosition="325.0">
+      <Methods>
+        <Method name="amplia" returnType="double" visibility="public">
+          <Argument type="double" name="escala"/>
+        </Method>
+        <Method name="espelha" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="CilindroEscalavel" package="" visibility="public" xPosition="722.0" yPosition="578.0">
+      <Fields>
+        <Field name="raio" type="double" visibility="private"/>
+        <Field name="altura" type="double" visibility="private"/>
+        <Field name="centroBase" type="Ponto3D" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CilindroEscalavel" returnType="void" visibility="public">
+          <Argument type="Ponto3D" name="ponto"/>
+          <Argument type="double" name="_raio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CirculoEscalavel" package="" visibility="public" xPosition="628.0" yPosition="97.0">
+      <Fields>
+        <Field name="centro" type="Ponto2" visibility="private"/>
+        <Field name="raio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="centro" returnType="Ponto2" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Esfera" package="" visibility="public" xPosition="862.0" yPosition="836.0">
+      <Fields>
+        <Field name="raio" type="double" visibility="private"/>
+        <Field name="centro" type="Ponto3D" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Esfera" returnType="void" visibility="public">
+          <Argument type="double" name="raio"/>
+          <Argument type="Ponto3D" name="centro"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ObjetoGeometrico" package="" visibility="public" xPosition="1106.0" yPosition="61.0">
+      <Methods>
+        <Method name="centro" returnType="Ponto2" visibility="public"/>
+        <Method name="clona" returnType="Ponto2" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ObjetoTridimensional" package="" visibility="public" xPosition="1187.0" yPosition="593.0">
+      <Methods>
+        <Method name="centro" returnType="Ponto3D" visibility="public"/>
+        <Method name="calculaSuperficie" returnType="double" visibility="public"/>
+        <Method name="calculaVolume" returnType="double" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Paralelepipedo" package="" visibility="public" xPosition="1219.0" yPosition="948.0">
+      <Fields>
+        <Field name="pontoInfEsq" type="Ponto3D" visibility="private"/>
+        <Field name="pontoAltoDir" type="Ponto3D" visibility="private"/>
+        <Field name="a" type="double" visibility="private"/>
+        <Field name="b" type="double" visibility="private"/>
+        <Field name="c" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Paralelepipedo" returnType="void" visibility="public">
+          <Argument type="Ponto3D" name="_pontoInfEsq"/>
+          <Argument type="Ponto3D" name="_pontoAltoDir"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ponto3D" package="" visibility="public" xPosition="190.0" yPosition="788.0">
+      <Fields>
+        <Field name="z" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Ponto3D" returnType="double" visibility="public">
+          <Argument type="double" name="_x"/>
+          <Argument type="double" name="_y"/>
+          <Argument type="double" name="_z"/>
+        </Method>
+        <Method name="Ponto3D" returnType="Ponto3D" visibility="public">
+          <Argument type="Ponto3D" name="_ponto"/>
+        </Method>
+        <Method name="getZ" returnType="double" visibility="public"/>
+        <Method name="setZ" returnType="double" visibility="public">
+          <Argument type="double" name="_z"/>
+        </Method>
+        <Method name="clonar" returnType="Ponto3D" visibility="public"/>
+        <Method name="criaSwap" returnType="Ponto3D" visibility="public"/>
+        <Method name="temEixoComum" returnType="Ponto3D" visibility="public">
+          <Argument type="Ponto3D" name="_ponto"/>
+        </Method>
+        <Method name="distancia" returnType="double" visibility="public">
+          <Argument type="double" name="x1"/>
+          <Argument type="double" name="y1"/>
+          <Argument type="double" name="z1"/>
+          <Argument type="double" name="x2"/>
+          <Argument type="double" name="y2"/>
+          <Argument type="double" name="z2"/>
+        </Method>
+        <Method name="distancia" returnType="Ponto3D" visibility="public">
+          <Argument type="Ponto3D" name="_ponto"/>
+        </Method>
+        <Method name="distancia" returnType="double" visibility="public">
+          <Argument type="double" name="_x"/>
+          <Argument type="double" name="_y"/>
+          <Argument type="double" name="_z"/>
+        </Method>
+        <Method name="distanciaDaOrigem" returnType="double" visibility="public"/>
+        <Method name="compareTo" returnType="Ponto3D" visibility="public">
+          <Argument type="Ponto3D" name="_ponto"/>
+        </Method>
+        <Method name="equals" returnType="Object" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RetanguloEscalavel" package="" visibility="public" xPosition="531.0" yPosition="295.0">
+      <Fields>
+        <Field name="supEsq" type="Ponto2" visibility="private"/>
+        <Field name="infDir" type="Ponto2" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="RetanguloEscalavel" returnType="void" visibility="public">
+          <Argument type="Ponto2" name="_supEsq"/>
+          <Argument type="Ponto2" name="_infDir"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Possui" source="RetanguloEscalavel" target="Ponto2" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Tem" source="Ponto3D" target="Ponto2" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CirculoEscalavel" target="ObjetoGeometrico"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CilindroEscalavel" target="ObjetoTridimensional"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="RetanguloEscalavel" target="ObjetoGeometrico"/>
+    <HasRelation name="Possui" source="CirculoEscalavel" target="Ponto2" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Possui" source="CilindroEscalavel" target="Ponto3D" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Esfera" target="ObjetoTridimensional"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="RetanguloEscalavel" target="Escalavel"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CilindroEscalavel" target="Escalavel"/>
+    <HasRelation name="Possui" source="Paralelepipedo" target="Ponto3D" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Paralelepipedo" target="ObjetoTridimensional"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CirculoEscalavel" target="Escalavel"/>
+    <HasRelation name="Possui" source="Esfera" target="Ponto3D" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
